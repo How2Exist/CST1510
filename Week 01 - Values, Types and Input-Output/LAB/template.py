@@ -78,7 +78,7 @@ percentage = (used_GB / total_GB) * 100
 # (e.g. warn under 20% free), so it shows at a glance whether the host needs attention.
 free_percentage = 100 - percentage
 # Note to reader: I have intentionally made the output
-# extremely difficult to read by writing everything 
+# extremely inconvenient to read by writing everything 
 # on one line. 
 # Please don't kill me. - Stefan
 print("=" * 30, f"\nRECORD CHECK: {hostname:>13}", "\n", "=" * 30, f"\nTotal: {total_GB:>20.2f}\nUsed: {used_GB:>21.2f}\nPercentage: {percentage:>15.2f}%\nFree: {free:+21.2f}\nFree %: {free_percentage:>19.2f}%", "\n", "=" * 30, sep = "")
