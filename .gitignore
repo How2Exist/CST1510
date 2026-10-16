@@ -1,10 +1,10 @@
 # Learning material: Both LAB and notebooks pushed.
 Week */*
-!Week */01/
-!Week */02/
-!Week */03/
-!Week */04/
-!Week */LAB/
+!Week */01/*
+!Week */02/*
+!Week */03/*
+!Week */04/*
+!Week */LAB/*
 
 # Files that should never be uploaded
 .venv/
