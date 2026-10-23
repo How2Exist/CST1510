@@ -7,9 +7,6 @@ Lane  :  IT
 Date  : 25/09/2026
 
 Run it:   python IT_Hostname_GB_Project.py
-
-Work through the numbered sections in order. Each one tells you what it must do.
-Delete these instructions as you replace them with your code.
 """
 
 

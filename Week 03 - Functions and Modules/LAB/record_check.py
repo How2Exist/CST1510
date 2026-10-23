@@ -12,7 +12,8 @@ Run it:   python record_check.py
 """
 # Hello! After making that quirky little loading thing with the dots for LAB D2
 # I decided that I'd like to have a little fun with the mini project.
-# I hope I haven't
+# I hope I haven't strayed too far from the origial question.
+# This was not easy to make.
 
 
 """Record Check program - compares rows loaded against rows expected and 
@@ -182,8 +183,7 @@ def print_report(label, value, limit, difference, percent, status):
     free_text = f"{difference:.2f}"
     percent_text = f"{percent:.2f}"
     title = "  RECORD CHECK  -  " + label
-    field = max(MIN_FIELD, len(used_text), len(total_text), len(free_text),
-                len(percent_text), len(status))
+    field = max(MIN_FIELD, len(used_text), len(total_text), len(free_text), len(percent_text), len(status))
     row_width = len(row_prefix("")) + field + len(PERCENT_SUFFIX) + MARGIN
     border = "=" * max(MIN_WIDTH, len(title) + 2, row_width)
 
@@ -231,8 +231,7 @@ def launch_in_new_terminal():
     was opened."""
     if os.environ.get(CHILD_FLAG) == "1" or sys.platform != "darwin":
         return False
-    command = (f"{CHILD_FLAG}=1 {shlex.quote(sys.executable)} "
-               f"{shlex.quote(os.path.abspath(__file__))}; exit")
+    command = (f"{CHILD_FLAG}=1 {shlex.quote(sys.executable)} " f"{shlex.quote(os.path.abspath(__file__))}; exit")
     escaped = command.replace("\\", "\\\\").replace('"', '\\"')
     apple = f'tell application "Terminal"\nactivate\ndo script "{escaped}"\nend tell'
     exit_code = os.system(f"osascript -e {shlex.quote(apple)} >/dev/null 2>&1")
@@ -263,10 +262,8 @@ def main():
             if label == "":
                 print("  Please enter a dataset name.")
                 continue
-            value = read_whole_number(
-                "Rows loaded: ", "Rows loaded must be a whole number, 0 or more.", True)
-            limit = read_whole_number(
-                "Rows expected: ", "Rows expected must be a whole number, above 0.", False)
+            value = read_whole_number("Rows loaded: ", "Rows loaded must be a whole number, 0 or more.", True)
+            limit = read_whole_number("Rows expected: ", "Rows expected must be a whole number, above 0.", False)
             difference, percent = check(value, limit)
             status = status_of(percent)
             loading_bar()
