@@ -1,0 +1,7 @@
+survey_2026,1187,1200
+customers_q3,4310,5000
+orders_oct,5120,5000
+inventory_main,950,1000
+web_logs_wk42,18200,20000
+returns_2026,310,400
+sensor_batch_7,2000,2000

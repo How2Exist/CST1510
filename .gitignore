@@ -1,0 +1,18 @@
+# Note to self: Ignore everything at the top level by default
+/*
+!/.gitignore
+
+# Note to self: Keep the Week folders, but ignore their direct contents
+!/Week */
+/Week */*
+
+# Note to self: Except the numbered subfolders, keeping only their notebooks
+!/Week */[0-9][0-9] */
+/Week */[0-9][0-9] */*
+!/Week */[0-9][0-9] */*.ipynb
+
+# Note to self: The LAB folder with everything in it
+!/Week */LAB/
+
+# Note to self: Stop MacOS junk
+.DS_Store
