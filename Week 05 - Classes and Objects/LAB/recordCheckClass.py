@@ -13,7 +13,7 @@ Run it:   python recordCheckClass.py
  
 from pathlib import Path
  
-''' Looking for the file'''
+''' Looking for the file '''
 Data_file = Path(__file__).resolve().parent / "records.txt"
 Border = "=" * 34
  
