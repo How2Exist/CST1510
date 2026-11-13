@@ -16,3 +16,7 @@
 
 # Note to self: Stop MacOS junk
 .DS_Store
+
+# Note to self: Add cheat sheet images
+!/Cheat_Sheet_Images/
+!/Cheat_Sheet_Images/**
